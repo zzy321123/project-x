@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="import">
+      <UniqueIdentifier>{b7216e52-ba1e-42db-afc8-2115715a1e76}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="import\detours">
+      <UniqueIdentifier>{a976bd44-5a0d-4d66-8075-0ad47f3ae98e}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="source\detours\creatwth.cpp">
+      <Filter>import\detours</Filter>
+    </ClCompile>
+    <ClCompile Include="source\detours\detours.cpp">
+      <Filter>import\detours</Filter>
+    </ClCompile>
+    <ClCompile Include="source\detours\disasm.cpp">
+      <Filter>import\detours</Filter>
+    </ClCompile>
+    <ClCompile Include="source\detours\image.cpp">
+      <Filter>import\detours</Filter>
+    </ClCompile>
+    <ClCompile Include="source\detours\modules.cpp">
+      <Filter>import\detours</Filter>
+    </ClCompile>
+    <ClCompile Include="CCrashReport.cpp" />
+    <ClCompile Include="CDetour.cpp" />
+    <ClCompile Include="CMemLeakDetect.cpp" />
+    <ClCompile Include="CDumpWin32.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="source\detours\detours.h">
+      <Filter>import\detours</Filter>
+    </ClInclude>
+    <ClInclude Include="source\detours\detver.h">
+      <Filter>import\detours</Filter>
+    </ClInclude>
+    <ClInclude Include="CCrashReport.h" />
+    <ClInclude Include="CDetour.h" />
+    <ClInclude Include="CMemLeakDetect.h" />
+    <ClInclude Include="CMiniDump.h" />
+    <ClInclude Include="CDumpWin32.h" />
+  </ItemGroup>
+</Project>
