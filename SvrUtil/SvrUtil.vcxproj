@@ -1,0 +1,242 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{46D53C1B-6D3E-4472-A044-7824C703E3CC}</ProjectGuid>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <Keyword>ManagedCProj</Keyword>
+    <RootNamespace>SvrUtil</RootNamespace>
+    <ProjectName>SvrUtil</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CLRSupport>false</CLRSupport>
+    <CharacterSet>NotSet</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <CLRSupport>true</CLRSupport>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <TargetName>$(ProjectName)_D</TargetName>
+    <IncludePath>../libDumpWin32;./source/zlib;./source/rapidxml;./source/json;./win_inc/libevent;./win_inc/libzmq;./win_inc/mysql;./win_inc/pthreads;./win_inc/iconv;$(VCInstallDir)include;$(VCInstallDir)atlmfc\include;$(WindowsSdkDir)include;$(FrameworkSDKDir)\include;$(IncludePath)</IncludePath>
+    <LibraryPath>./win_lib;$(VCInstallDir)lib;$(VCInstallDir)atlmfc\lib;$(WindowsSdkDir)lib;$(FrameworkSDKDir)\lib</LibraryPath>
+    <IntDir>$(SolutionDir)Temp\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_WIN32;_DEBUG;_LIB;_CRT_SECURE_NO_WARNINGS;UTIL_EXPORT;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>libevent.lib;libmysql.lib;pthreadVC2.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>./win_lib/;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+    <Lib>
+      <AdditionalDependencies>libevent.lib;libzmq.lib;libmysql.lib;pthreadVC2.lib;libiconv.lib</AdditionalDependencies>
+    </Lib>
+    <Lib>
+      <AdditionalLibraryDirectories>./win_lib/;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>UTIL_MYSQL;WIN32;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <AdditionalIncludeDirectories>./win_inc/libevent;./win_inc/libzmq;./win_inc/mysql;./win_inc/pthreads;../external/nedmalloc;../external/rapidxml;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>libevent.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>./win/libevent/lib</AdditionalLibraryDirectories>
+    </Link>
+    <Lib>
+      <AdditionalDependencies>libevent.lib;libmysql.lib;pthreadVC2.lib</AdditionalDependencies>
+    </Lib>
+    <Lib>
+      <AdditionalLibraryDirectories>./win_lib/;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Atomic.h" />
+    <ClInclude Include="BaseHeader.h" />
+    <ClInclude Include="ByteOrder.h" />
+    <ClInclude Include="CAnyType.h" />
+    <ClInclude Include="CApp.h" />
+    <ClInclude Include="CAppObj.h" />
+    <ClInclude Include="CDatabase.h" />
+    <ClInclude Include="CDBManager.h" />
+    <ClInclude Include="CLockMap.h" />
+    <ClInclude Include="CMsg.h" />
+    <ClInclude Include="CMsgManager.h" />
+    <ClInclude Include="CMysql.h" />
+    <ClInclude Include="CObjBase.h" />
+    <ClInclude Include="CObjManager.h" />
+    <ClInclude Include="CParamVector.h" />
+    <ClInclude Include="CValueHolder.h" />
+    <ClInclude Include="CCounter.h" />
+    <ClInclude Include="RWLock.h" />
+    <ClInclude Include="CZmq.h" />
+    <ClInclude Include="CZmqManager.h" />
+    <ClInclude Include="Marshal.h" />
+    <ClInclude Include="MarshalData.h" />
+    <ClInclude Include="Octets.h" />
+    <ClInclude Include="OctetsStream.h" />
+    <ClInclude Include="Protocol.h" />
+    <ClInclude Include="ProtocolManager.h" />
+    <ClInclude Include="SaveAttribute.h" />
+    <ClInclude Include="CScope.h" />
+    <ClInclude Include="RefCounter.h" />
+    <ClInclude Include="Exception.h" />
+    <ClInclude Include="IPAddr.h" />
+    <ClInclude Include="Logger.h" />
+    <ClInclude Include="LoggerManager.h" />
+    <ClInclude Include="SvrUtil.h" />
+    <ClInclude Include="CDiskFile.h" />
+    <ClInclude Include="CFile.h" />
+    <ClInclude Include="CJson.h" />
+    <ClInclude Include="TimerManager.h" />
+    <ClInclude Include="UtilMalloc.h" />
+    <ClInclude Include="ManagerBase.h" />
+    <ClInclude Include="CMath.h" />
+    <ClInclude Include="Mutex.h" />
+    <ClInclude Include="OSOperator.h" />
+    <ClInclude Include="CRand.h" />
+    <ClInclude Include="Security.h" />
+    <ClInclude Include="Session.h" />
+    <ClInclude Include="Socket.h" />
+    <ClInclude Include="SocketAddr.h" />
+    <ClInclude Include="SocketPair.h" />
+    <ClInclude Include="SpinLock.h" />
+    <ClInclude Include="StringUtil.h" />
+    <ClInclude Include="SysProtocol.h" />
+    <ClInclude Include="Task.h" />
+    <ClInclude Include="Thread.h" />
+    <ClInclude Include="ThreadPool.h" />
+    <ClInclude Include="CMemoryFile.h" />
+    <ClInclude Include="CXmlAttribute.h" />
+    <ClInclude Include="CXmlDocument.h" />
+    <ClInclude Include="CXmlElement.h" />
+    <ClInclude Include="CXmlFile.h" />
+    <ClInclude Include="UtilZipReader.h" />
+    <ClInclude Include="UtilZlib.h" />
+    <ClInclude Include="XID.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="CApp.cpp" />
+    <ClCompile Include="CAppObj.cpp" />
+    <ClCompile Include="CDatabase.cpp" />
+    <ClCompile Include="CDBManager.cpp" />
+    <ClCompile Include="CMsg.cpp" />
+    <ClCompile Include="CMsgManager.cpp" />
+    <ClCompile Include="CMysql.cpp" />
+    <ClCompile Include="CObjBase.cpp" />
+    <ClCompile Include="CObjManager.cpp" />
+    <ClCompile Include="CParamVector.cpp" />
+    <ClCompile Include="CCounter.cpp" />
+    <ClCompile Include="RWLock.cpp" />
+    <ClCompile Include="CZmq.cpp" />
+    <ClCompile Include="CZmqManager.cpp" />
+    <ClCompile Include="Marshal.cpp" />
+    <ClCompile Include="MarshalData.cpp" />
+    <ClCompile Include="Octets.cpp" />
+    <ClCompile Include="OctetsStream.cpp" />
+    <ClCompile Include="Protocol.cpp" />
+    <ClCompile Include="ProtocolGen.cpp" />
+    <ClCompile Include="ProtocolManager.cpp" />
+    <ClCompile Include="SaveAttribute.cpp" />
+    <ClCompile Include="CScope.cpp" />
+    <ClCompile Include="RefCounter.cpp" />
+    <ClCompile Include="Exception.cpp" />
+    <ClCompile Include="IPAddr.cpp" />
+    <ClCompile Include="Logger.cpp" />
+    <ClCompile Include="LoggerManager.cpp" />
+    <ClCompile Include="source\json\json_reader.cpp" />
+    <ClCompile Include="source\json\json_value.cpp" />
+    <ClCompile Include="source\json\json_writer.cpp" />
+    <ClCompile Include="source\zlib\adler32.c" />
+    <ClCompile Include="source\zlib\compress.c" />
+    <ClCompile Include="source\zlib\crc32.c" />
+    <ClCompile Include="source\zlib\deflate.c" />
+    <ClCompile Include="source\zlib\infback.c" />
+    <ClCompile Include="source\zlib\inffast.c" />
+    <ClCompile Include="source\zlib\inflate.c" />
+    <ClCompile Include="source\zlib\inftrees.c" />
+    <ClCompile Include="source\zlib\ioapi.c" />
+    <ClCompile Include="source\zlib\trees.c" />
+    <ClCompile Include="source\zlib\uncompr.c" />
+    <ClCompile Include="source\zlib\unzip.c" />
+    <ClCompile Include="source\zlib\zutil.c" />
+    <ClCompile Include="SvrUtil.cpp" />
+    <ClCompile Include="CDiskFile.cpp" />
+    <ClCompile Include="CFile.cpp" />
+    <ClCompile Include="CJson.cpp" />
+    <ClCompile Include="TimerManager.cpp" />
+    <ClCompile Include="UtilMalloc.cpp" />
+    <ClCompile Include="ManagerBase.cpp" />
+    <ClCompile Include="CMath.cpp" />
+    <ClCompile Include="Mutex.cpp" />
+    <ClCompile Include="OSOperator.cpp" />
+    <ClCompile Include="CRand.cpp" />
+    <ClCompile Include="Security.cpp" />
+    <ClCompile Include="Session.cpp" />
+    <ClCompile Include="Socket.cpp" />
+    <ClCompile Include="SocketAddr.cpp" />
+    <ClCompile Include="SocketPair.cpp" />
+    <ClCompile Include="SpinLock.cpp" />
+    <ClCompile Include="StringUtil.cpp" />
+    <ClCompile Include="Task.cpp" />
+    <ClCompile Include="Thread.cpp" />
+    <ClCompile Include="ThreadPool.cpp" />
+    <ClCompile Include="CMemoryFile.cpp" />
+    <ClCompile Include="CXmlFile.cpp" />
+    <ClCompile Include="UtilZipReader.cpp" />
+    <ClCompile Include="UtilZlib.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Makefile" />
+    <None Include="source\json\Makefile" />
+    <None Include="source\zlib\Makefile" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

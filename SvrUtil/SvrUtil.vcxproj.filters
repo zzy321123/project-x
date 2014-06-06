@@ -1,0 +1,474 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="assert">
+      <UniqueIdentifier>{a8a066a2-d392-4ad2-9bbc-060e29068305}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="zmq">
+      <UniqueIdentifier>{05b7f57b-f6d9-414f-ab38-3458581bc1e7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="db">
+      <UniqueIdentifier>{64e86a1c-10d4-4496-8c55-3ded31b62f9e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="log">
+      <UniqueIdentifier>{00d93353-47a6-41d3-b611-89181f19a58c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="math">
+      <UniqueIdentifier>{7fd29fd9-bbe4-406d-b082-f3880b33277d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="memory">
+      <UniqueIdentifier>{527f5b00-ecc6-406f-bf58-d5cb246c23ed}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="network">
+      <UniqueIdentifier>{d892ca1e-db5b-4c0d-9408-4439a81b1610}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="synch">
+      <UniqueIdentifier>{9d688bfb-208f-4a74-80c6-af14708ded83}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="objbase">
+      <UniqueIdentifier>{a4f82c0f-6a35-46e2-9776-55be6385d867}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="os">
+      <UniqueIdentifier>{ba966390-e5c9-4c00-905e-29d00be73cf9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="socket">
+      <UniqueIdentifier>{0ba52bb9-b00a-459a-8cb5-3be802081841}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="string">
+      <UniqueIdentifier>{438040c1-6262-4e3a-b429-e77b24b78b41}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="thread">
+      <UniqueIdentifier>{4a2fc86f-65ec-4c49-bf31-639ca7e46b45}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="file">
+      <UniqueIdentifier>{0d7dcdf4-1be5-4048-8c11-fcfcd1f8e4c6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="time">
+      <UniqueIdentifier>{b64637fd-6d32-47d5-8f40-42429b6545ae}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="zip">
+      <UniqueIdentifier>{8f010861-1823-403d-b7ba-9d9edcaffea5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="protocol">
+      <UniqueIdentifier>{79143e24-1ea9-4bc5-8c0f-5d8d6e66c661}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="import">
+      <UniqueIdentifier>{0a4ea118-a041-450c-9934-392661d4e9f1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="import\zlib">
+      <UniqueIdentifier>{cc1fe69d-843d-4971-92eb-d25430a1a4e0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="import\json">
+      <UniqueIdentifier>{6fd2a97e-c5af-4262-99e7-665852aa7e75}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="app">
+      <UniqueIdentifier>{e8ca1b74-2e09-4216-b2ac-2c509b66bcfe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="msg">
+      <UniqueIdentifier>{57098a84-60ed-47fe-97a5-fcc4acf48c98}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="ThreadPool.h">
+      <Filter>thread</Filter>
+    </ClInclude>
+    <ClInclude Include="Thread.h">
+      <Filter>thread</Filter>
+    </ClInclude>
+    <ClInclude Include="Task.h">
+      <Filter>thread</Filter>
+    </ClInclude>
+    <ClInclude Include="Atomic.h">
+      <Filter>os</Filter>
+    </ClInclude>
+    <ClInclude Include="OSOperator.h">
+      <Filter>os</Filter>
+    </ClInclude>
+    <ClInclude Include="Logger.h">
+      <Filter>log</Filter>
+    </ClInclude>
+    <ClInclude Include="LoggerManager.h">
+      <Filter>log</Filter>
+    </ClInclude>
+    <ClInclude Include="ManagerBase.h">
+      <Filter>memory</Filter>
+    </ClInclude>
+    <ClInclude Include="IPAddr.h">
+      <Filter>socket</Filter>
+    </ClInclude>
+    <ClInclude Include="Socket.h">
+      <Filter>socket</Filter>
+    </ClInclude>
+    <ClInclude Include="SocketAddr.h">
+      <Filter>socket</Filter>
+    </ClInclude>
+    <ClInclude Include="RefCounter.h">
+      <Filter>memory</Filter>
+    </ClInclude>
+    <ClInclude Include="StringUtil.h">
+      <Filter>string</Filter>
+    </ClInclude>
+    <ClInclude Include="ByteOrder.h">
+      <Filter>network</Filter>
+    </ClInclude>
+    <ClInclude Include="Marshal.h">
+      <Filter>network</Filter>
+    </ClInclude>
+    <ClInclude Include="MarshalData.h">
+      <Filter>network</Filter>
+    </ClInclude>
+    <ClInclude Include="Octets.h">
+      <Filter>network</Filter>
+    </ClInclude>
+    <ClInclude Include="OctetsStream.h">
+      <Filter>network</Filter>
+    </ClInclude>
+    <ClInclude Include="Security.h">
+      <Filter>network</Filter>
+    </ClInclude>
+    <ClInclude Include="Session.h">
+      <Filter>network</Filter>
+    </ClInclude>
+    <ClInclude Include="BaseHeader.h" />
+    <ClInclude Include="SocketPair.h">
+      <Filter>socket</Filter>
+    </ClInclude>
+    <ClInclude Include="CMath.h">
+      <Filter>math</Filter>
+    </ClInclude>
+    <ClInclude Include="UtilMalloc.h">
+      <Filter>memory</Filter>
+    </ClInclude>
+    <ClInclude Include="SvrUtil.h" />
+    <ClInclude Include="CDatabase.h">
+      <Filter>db</Filter>
+    </ClInclude>
+    <ClInclude Include="CMysql.h">
+      <Filter>db</Filter>
+    </ClInclude>
+    <ClInclude Include="CDBManager.h">
+      <Filter>db</Filter>
+    </ClInclude>
+    <ClInclude Include="CObjManager.h">
+      <Filter>objbase</Filter>
+    </ClInclude>
+    <ClInclude Include="CObjBase.h">
+      <Filter>objbase</Filter>
+    </ClInclude>
+    <ClInclude Include="SaveAttribute.h">
+      <Filter>objbase</Filter>
+    </ClInclude>
+    <ClInclude Include="CZmq.h">
+      <Filter>zmq</Filter>
+    </ClInclude>
+    <ClInclude Include="CZmqManager.h">
+      <Filter>zmq</Filter>
+    </ClInclude>
+    <ClInclude Include="Mutex.h">
+      <Filter>synch</Filter>
+    </ClInclude>
+    <ClInclude Include="SpinLock.h">
+      <Filter>synch</Filter>
+    </ClInclude>
+    <ClInclude Include="Exception.h">
+      <Filter>assert</Filter>
+    </ClInclude>
+    <ClInclude Include="CJson.h">
+      <Filter>file</Filter>
+    </ClInclude>
+    <ClInclude Include="CDiskFile.h">
+      <Filter>file</Filter>
+    </ClInclude>
+    <ClInclude Include="CFile.h">
+      <Filter>file</Filter>
+    </ClInclude>
+    <ClInclude Include="CMemoryFile.h">
+      <Filter>file</Filter>
+    </ClInclude>
+    <ClInclude Include="CXmlAttribute.h">
+      <Filter>file</Filter>
+    </ClInclude>
+    <ClInclude Include="CXmlDocument.h">
+      <Filter>file</Filter>
+    </ClInclude>
+    <ClInclude Include="CXmlElement.h">
+      <Filter>file</Filter>
+    </ClInclude>
+    <ClInclude Include="CXmlFile.h">
+      <Filter>file</Filter>
+    </ClInclude>
+    <ClInclude Include="CScope.h">
+      <Filter>memory</Filter>
+    </ClInclude>
+    <ClInclude Include="CRand.h">
+      <Filter>math</Filter>
+    </ClInclude>
+    <ClInclude Include="TimerManager.h">
+      <Filter>time</Filter>
+    </ClInclude>
+    <ClInclude Include="UtilZipReader.h">
+      <Filter>zip</Filter>
+    </ClInclude>
+    <ClInclude Include="UtilZlib.h">
+      <Filter>zip</Filter>
+    </ClInclude>
+    <ClInclude Include="Protocol.h">
+      <Filter>protocol</Filter>
+    </ClInclude>
+    <ClInclude Include="ProtocolManager.h">
+      <Filter>protocol</Filter>
+    </ClInclude>
+    <ClInclude Include="SysProtocol.h">
+      <Filter>protocol</Filter>
+    </ClInclude>
+    <ClInclude Include="RWLock.h">
+      <Filter>synch</Filter>
+    </ClInclude>
+    <ClInclude Include="CApp.h">
+      <Filter>app</Filter>
+    </ClInclude>
+    <ClInclude Include="CAppObj.h">
+      <Filter>app</Filter>
+    </ClInclude>
+    <ClInclude Include="XID.h">
+      <Filter>msg</Filter>
+    </ClInclude>
+    <ClInclude Include="CParamVector.h">
+      <Filter>msg</Filter>
+    </ClInclude>
+    <ClInclude Include="CValueHolder.h">
+      <Filter>msg</Filter>
+    </ClInclude>
+    <ClInclude Include="CMsg.h">
+      <Filter>msg</Filter>
+    </ClInclude>
+    <ClInclude Include="CMsgManager.h">
+      <Filter>msg</Filter>
+    </ClInclude>
+    <ClInclude Include="CAnyType.h">
+      <Filter>msg</Filter>
+    </ClInclude>
+    <ClInclude Include="CLockMap.h">
+      <Filter>synch</Filter>
+    </ClInclude>
+    <ClInclude Include="CCounter.h">
+      <Filter>math</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="ThreadPool.cpp">
+      <Filter>thread</Filter>
+    </ClCompile>
+    <ClCompile Include="Thread.cpp">
+      <Filter>thread</Filter>
+    </ClCompile>
+    <ClCompile Include="Task.cpp">
+      <Filter>thread</Filter>
+    </ClCompile>
+    <ClCompile Include="OSOperator.cpp">
+      <Filter>os</Filter>
+    </ClCompile>
+    <ClCompile Include="Logger.cpp">
+      <Filter>log</Filter>
+    </ClCompile>
+    <ClCompile Include="LoggerManager.cpp">
+      <Filter>log</Filter>
+    </ClCompile>
+    <ClCompile Include="ManagerBase.cpp">
+      <Filter>memory</Filter>
+    </ClCompile>
+    <ClCompile Include="IPAddr.cpp">
+      <Filter>socket</Filter>
+    </ClCompile>
+    <ClCompile Include="Socket.cpp">
+      <Filter>socket</Filter>
+    </ClCompile>
+    <ClCompile Include="SocketAddr.cpp">
+      <Filter>socket</Filter>
+    </ClCompile>
+    <ClCompile Include="RefCounter.cpp">
+      <Filter>memory</Filter>
+    </ClCompile>
+    <ClCompile Include="StringUtil.cpp">
+      <Filter>string</Filter>
+    </ClCompile>
+    <ClCompile Include="Marshal.cpp">
+      <Filter>network</Filter>
+    </ClCompile>
+    <ClCompile Include="MarshalData.cpp">
+      <Filter>network</Filter>
+    </ClCompile>
+    <ClCompile Include="Octets.cpp">
+      <Filter>network</Filter>
+    </ClCompile>
+    <ClCompile Include="OctetsStream.cpp">
+      <Filter>network</Filter>
+    </ClCompile>
+    <ClCompile Include="Security.cpp">
+      <Filter>network</Filter>
+    </ClCompile>
+    <ClCompile Include="Session.cpp">
+      <Filter>network</Filter>
+    </ClCompile>
+    <ClCompile Include="SocketPair.cpp">
+      <Filter>socket</Filter>
+    </ClCompile>
+    <ClCompile Include="CMath.cpp">
+      <Filter>math</Filter>
+    </ClCompile>
+    <ClCompile Include="UtilMalloc.cpp">
+      <Filter>memory</Filter>
+    </ClCompile>
+    <ClCompile Include="SvrUtil.cpp" />
+    <ClCompile Include="CDatabase.cpp">
+      <Filter>db</Filter>
+    </ClCompile>
+    <ClCompile Include="CMysql.cpp">
+      <Filter>db</Filter>
+    </ClCompile>
+    <ClCompile Include="CDBManager.cpp">
+      <Filter>db</Filter>
+    </ClCompile>
+    <ClCompile Include="CObjBase.cpp">
+      <Filter>objbase</Filter>
+    </ClCompile>
+    <ClCompile Include="CObjManager.cpp">
+      <Filter>objbase</Filter>
+    </ClCompile>
+    <ClCompile Include="SaveAttribute.cpp">
+      <Filter>objbase</Filter>
+    </ClCompile>
+    <ClCompile Include="CZmq.cpp">
+      <Filter>zmq</Filter>
+    </ClCompile>
+    <ClCompile Include="CZmqManager.cpp">
+      <Filter>zmq</Filter>
+    </ClCompile>
+    <ClCompile Include="Mutex.cpp">
+      <Filter>synch</Filter>
+    </ClCompile>
+    <ClCompile Include="SpinLock.cpp">
+      <Filter>synch</Filter>
+    </ClCompile>
+    <ClCompile Include="Exception.cpp">
+      <Filter>assert</Filter>
+    </ClCompile>
+    <ClCompile Include="CJson.cpp">
+      <Filter>file</Filter>
+    </ClCompile>
+    <ClCompile Include="CDiskFile.cpp">
+      <Filter>file</Filter>
+    </ClCompile>
+    <ClCompile Include="CFile.cpp">
+      <Filter>file</Filter>
+    </ClCompile>
+    <ClCompile Include="CMemoryFile.cpp">
+      <Filter>file</Filter>
+    </ClCompile>
+    <ClCompile Include="CXmlFile.cpp">
+      <Filter>file</Filter>
+    </ClCompile>
+    <ClCompile Include="CScope.cpp">
+      <Filter>memory</Filter>
+    </ClCompile>
+    <ClCompile Include="CRand.cpp">
+      <Filter>math</Filter>
+    </ClCompile>
+    <ClCompile Include="TimerManager.cpp">
+      <Filter>time</Filter>
+    </ClCompile>
+    <ClCompile Include="UtilZipReader.cpp">
+      <Filter>zip</Filter>
+    </ClCompile>
+    <ClCompile Include="UtilZlib.cpp">
+      <Filter>zip</Filter>
+    </ClCompile>
+    <ClCompile Include="Protocol.cpp">
+      <Filter>protocol</Filter>
+    </ClCompile>
+    <ClCompile Include="ProtocolManager.cpp">
+      <Filter>protocol</Filter>
+    </ClCompile>
+    <ClCompile Include="ProtocolGen.cpp">
+      <Filter>protocol</Filter>
+    </ClCompile>
+    <ClCompile Include="RWLock.cpp">
+      <Filter>synch</Filter>
+    </ClCompile>
+    <ClCompile Include="source\zlib\adler32.c">
+      <Filter>import\zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="source\zlib\compress.c">
+      <Filter>import\zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="source\zlib\crc32.c">
+      <Filter>import\zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="source\zlib\deflate.c">
+      <Filter>import\zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="source\zlib\infback.c">
+      <Filter>import\zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="source\zlib\inffast.c">
+      <Filter>import\zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="source\zlib\inflate.c">
+      <Filter>import\zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="source\zlib\inftrees.c">
+      <Filter>import\zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="source\zlib\ioapi.c">
+      <Filter>import\zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="source\zlib\trees.c">
+      <Filter>import\zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="source\zlib\uncompr.c">
+      <Filter>import\zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="source\zlib\unzip.c">
+      <Filter>import\zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="source\zlib\zutil.c">
+      <Filter>import\zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="source\json\json_reader.cpp">
+      <Filter>import\json</Filter>
+    </ClCompile>
+    <ClCompile Include="source\json\json_value.cpp">
+      <Filter>import\json</Filter>
+    </ClCompile>
+    <ClCompile Include="source\json\json_writer.cpp">
+      <Filter>import\json</Filter>
+    </ClCompile>
+    <ClCompile Include="CApp.cpp">
+      <Filter>app</Filter>
+    </ClCompile>
+    <ClCompile Include="CAppObj.cpp">
+      <Filter>app</Filter>
+    </ClCompile>
+    <ClCompile Include="CMsg.cpp">
+      <Filter>msg</Filter>
+    </ClCompile>
+    <ClCompile Include="CMsgManager.cpp">
+      <Filter>msg</Filter>
+    </ClCompile>
+    <ClCompile Include="CParamVector.cpp">
+      <Filter>msg</Filter>
+    </ClCompile>
+    <ClCompile Include="CCounter.cpp">
+      <Filter>math</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Makefile" />
+    <None Include="source\zlib\Makefile">
+      <Filter>import\zlib</Filter>
+    </None>
+    <None Include="source\json\Makefile">
+      <Filter>import\json</Filter>
+    </None>
+  </ItemGroup>
+</Project>
