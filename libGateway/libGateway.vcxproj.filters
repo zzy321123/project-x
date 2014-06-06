@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="gate">
+      <UniqueIdentifier>{3836779f-0fed-4961-81cb-cabef584e288}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="server">
+      <UniqueIdentifier>{5a14a26c-dc25-4271-8221-c31da5c2a2b8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="proxy">
+      <UniqueIdentifier>{52cd140b-98a7-4093-8b61-493b62a421f9}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="BaseGateway.cpp">
+      <Filter>server</Filter>
+    </ClCompile>
+    <ClCompile Include="BaseGateProxy.cpp">
+      <Filter>proxy</Filter>
+    </ClCompile>
+    <ClCompile Include="BaseGateThread.cpp">
+      <Filter>gate</Filter>
+    </ClCompile>
+    <ClCompile Include="BaseGateSecurity.cpp">
+      <Filter>server</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="BaseGateway.h">
+      <Filter>server</Filter>
+    </ClInclude>
+    <ClInclude Include="BaseGateProxy.h">
+      <Filter>proxy</Filter>
+    </ClInclude>
+    <ClInclude Include="BaseGateDef.h">
+      <Filter>gate</Filter>
+    </ClInclude>
+    <ClInclude Include="BaseGateThread.h">
+      <Filter>gate</Filter>
+    </ClInclude>
+    <ClInclude Include="BaseGateSecurity.h">
+      <Filter>server</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Makefile" />
+  </ItemGroup>
+</Project>
